@@ -37,10 +37,10 @@
 - name: Configure voice class e164-pattern-map 2
   cisco.ios.ios_config:
     lines:
-      - e164 +011
-      - e164 +1[2-9]..[2-9]......
-      - e164 +[2-9]..[2-9]......
-      - e164 +911
+      - e164 011
+      - e164 1[2-9]..[2-9]......
+      - e164 [2-9]..[2-9]......
+      - e164 911
     parents: voice class e164-pattern-map 2
 
 - name: Configure dial-peer voice 101 voip
