@@ -1,0 +1,12 @@
+[CUBES]
+cube1 ansible_host=10.8.5.101
+cube2 ansible_host=10.8.5.102
+
+[CUBES:vars]
+ansible_connection=network_cli
+ansible_network_os=cisco.ios.ios
+ansible_user=admin
+ansible_password=C!sco123
+ansible_become=yes
+ansible_become_method=enable
+ansible_become_password=C!sco123
