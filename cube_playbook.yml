@@ -1,0 +1,17 @@
+---
+- name: Configure CUBE routers
+  hosts: CUBES
+  gather_facts: no
+
+  tasks:
+    - name: Test connection to routers
+      cisco.ios.ios_command:
+        commands:
+          - show version
+          - show ip interface brief
+
+      register: output
+
+    - name: Display command output
+      debug:
+        var: output.stdout_lines
